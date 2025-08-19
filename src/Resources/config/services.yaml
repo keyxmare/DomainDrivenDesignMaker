@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Keyxmare\DomainDrivenDesignMakerBundle\Maker\MakeBoundedContext:
+        arguments:
+            $fileManager: '@maker.file_manager'
+        tags: ['maker.command']
